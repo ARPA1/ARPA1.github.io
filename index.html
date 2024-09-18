@@ -73,13 +73,32 @@
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <p>Jika Anda memiliki pertanyaan, proyek, atau ingin berdiskusi lebih lanjut mengenai layanan yang saya tawarkan, jangan ragu untuk menghubungi saya. Saya siap membantu mewujudkan ide-ide Anda menjadi realitas digital. Silakan isi formulir di bawah ini, dan saya akan segera menghubungi Anda.</p>
-        <form action="#">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
+        
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+    
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+    
+            
+            var whatsappURL = `https://api.whatsapp.com/send?phone=6285174294370&text=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+    
+            
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+    
     
     <!-- FOOTER -->
     <footer class="footer">
