@@ -23,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background-color: rgba(22, 226, 245, 0.8); 
 }
 
 .logo {
@@ -32,7 +33,7 @@ header {
 }
 
 .logo span {
-    color: #16e2f5;
+    color: #ff6f61;
 }
 
 .navigation {
@@ -49,14 +50,14 @@ header {
 }
 
 .navigation a:hover {
-    color: #16e2f5;
+    color: #ff6f61; 
 }
 
 .btn-talk {
     color: #fff;
     text-decoration: none;
     padding: 8px 35px;
-    background: #16e2f5;
+    background: linear-gradient(45deg, #16e2f5, #ffdd57); 
     border-radius: 10px;
     border: 2px solid #16e2f5;
     font-weight: 500;
@@ -66,15 +67,14 @@ header {
 .btn-talk:hover {
     color: black;
     background: transparent;
+    border: 2px solid #ffdd57;
 }
 
 .home {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url("assets/background1.jpg");
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #16e2f5 0%, #0bb3c9 50%, #ffdd57 100%); 
     display: flex;
     align-items: center;
     padding: 30px 100px;
@@ -82,42 +82,46 @@ header {
 
 .content {
     max-width: 500px;
-    color: #555;
+    color: #fff;
 }
 
 .content h2 {
     font-size: 3em;
+    color: white;
 }
 
 .content h2 span {
-    color: #16e2f5;
+    color: #ff6f61; 
 }
 
 .content h4 {
     font-size: 2em;
+    color: #ffffff;
 }
 
 .content p {
     padding: 10px 0 40px 0;
+    color: #f0f8ff;
 }
 
 .btn-group a {
     color: #fff;
     text-decoration: none;
     padding: 10px 40px;
-    background: #16e2f5;
+    background: #ff6f61; 
     border-radius: 10px;
     border: 2px solid #16e2f5;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 .btn-group a:hover:nth-child(1) {
-    color: #16e2f5;
+    color: #ffdd57;
     background: transparent;
 }
 
 .btn-group a:nth-child(2) {
-    color: #16e2f5;
+    color: #ff6f61;
     background: transparent;
     margin-left: 30px;
     padding: 10px 30px;
@@ -125,7 +129,7 @@ header {
 
 .btn-group a:hover:nth-child(2) {
     color: #fff;
-    background: #16e2f5;
+    background: #ff6f61; 
 }
 
 .social-icons {
@@ -137,13 +141,13 @@ header {
     display: inline-block;
     width: 35px;
     height: 35px;
-    background: #16e2f5;
+    background: #ff6f61; 
     border-radius: 50%;
     margin-right: 22px;
     text-align: center;
     line-height: 35px;
     border: 1px solid #fff;
-    outline: 2px solid #16e2f5;
+    outline: 2px solid #ff6f61;
     transition: .3s;
 }
 
@@ -161,8 +165,8 @@ header {
     display: flex;
     align-items: center;
     padding: 100px 100px;
-    background: #f4f4f4;
-    color: #333;
+    background: linear-gradient(135deg, #0bb3c9 0%, #16e2f5 50%, #ffdd57 100%); 
+    color: #fff;
 }
 
 .about-container {
@@ -173,6 +177,7 @@ header {
 .about h2 {
     font-size: 2.8em;
     margin-bottom: 20px;
+    color: white;
 }
 
 .about p {
@@ -185,14 +190,14 @@ header {
     color: #fff;
     text-decoration: none;
     padding: 10px 30px;
-    background: #16e2f5;
+    background: linear-gradient(45deg, #16e2f5, #ff6f61); 
     border-radius: 5px;
     font-weight: 500;
     transition: 0.3s;
 }
 
 .about .btn-about:hover {
-    background: #0bb3c9;
+    background: #ffdd57;
 }
 
 .about-image {
@@ -210,14 +215,15 @@ header {
 
 .skills {
     padding: 100px 100px;
-    background: #f9f9f9;
-    color: #333;
+    background: linear-gradient(135deg, #16e2f5 0%, #ffdd57 100%); 
+    color: #fff;
     text-align: center;
 }
 
 .skills h2 {
     font-size: 2.8em;
     margin-bottom: 20px;
+    color: white;
 }
 
 .skills p {
@@ -243,29 +249,32 @@ header {
 
 .skill i {
     font-size: 3em;
-    color: #16e2f5;
+    color: #ff6f61;
     margin-bottom: 15px;
 }
 
 .skill h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
+    color: #16e2f5;
 }
 
 .skill p {
     font-size: 1em;
     line-height: 1.5;
+    color: #333;
 }
 
 .contact {
     padding: 100px 100px;
-    background: #fff;
-    color: #333;
+    background: #0bb3c9;
+    color: #fff;
 }
 
 .contact h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: white;
 }
 
 .contact p {
@@ -277,11 +286,26 @@ header {
 .contact form {
     display: flex;
     flex-direction: column;
+    gap: 20px; 
+}
+
+.contact form .form-group {
+    display: flex;
+    gap: 20px;
+}
+
+.contact form .form-group input {
+    flex: 1;
+}
+
+.contact form textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
 }
 
 .contact form input, .contact form textarea {
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
@@ -289,7 +313,7 @@ header {
 
 .contact form button {
     padding: 10px 20px;
-    background-color: #16e2f5;
+    background-color: #ff6f61; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -299,7 +323,7 @@ header {
 }
 
 .contact form button:hover {
-    background-color: #0bb3c9;
+    background-color: #ffdd57; 
 }
 
 /* Footer */
@@ -322,106 +346,7 @@ header {
 
 /* Responsive Media Queries */
 
-@media (max-width: 1200px) {
-    header {
-        padding: 20px 50px;
-    }
 
-    .logo {
-        font-size: 1.5em;
-    }
-
-    .navigation {
-        margin-left: 0;
-    }
-
-    .navigation a {
-        font-size: 1em;
-        margin-right: 20px;
-    }
-
-    .home {
-        padding: 20px;
-    }
-
-    .content {
-        max-width: 90%;
-    }
-
-    .about {
-        padding: 40px 20px;
-    }
-
-    .skills {
-        padding: 40px 20px;
-    }
-
-    .contact {
-        padding: 40px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 20px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        font-size: 1.2em;
-    }
-
-    .navigation {
-        display: none;
-    }
-
-    .btn-talk {
-        display: none;
-    }
-
-    .home {
-        padding: 20px;
-        background-position: top center;
-    }
-
-    .content h2 {
-        font-size: 2em;
-    }
-
-    .content h4 {
-        font-size: 1.2em;
-    }
-
-    .content p {
-        padding: 5px 0;
-    }
-
-    .about {
-        padding: 30px 10px;
-    }
-
-    .skill-set {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact {
-        padding: 30px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        font-size: 1em;
-    }
-
-    .navigation a {
-        font-size: 0.9em;
-    }
-}
-
-/* Responsive Media Queries */
 
 /* Tablet View */
 @media (max-width: 768px) {
@@ -436,11 +361,11 @@ header {
     }
 
     .navigation {
-        display: none; /* Hide navigation menu on smaller screens */
+        display: none; 
     }
 
     .btn-talk {
-        display: none; /* Hide "Let's Talk" button on mobile */
+        display: none; 
     }
 
     .home {
